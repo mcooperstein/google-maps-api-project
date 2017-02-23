@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body>
+<!--<body>
     <h1>Google Maps API Project</h1>
 
     <div id="map-canvas"></div>
@@ -20,6 +20,26 @@
 
     <script src="scripts.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjsuf6lDKHz_fkTGZTNuh3qehl_LzJP-o&callback=initMap&libraries=places" async defer></script>
+</body>-->
+
+<body>
+    <div>
+        Google Maps API
+    </div>
+    <input placeholder="search an address" id="address">
+    <button id="glmaps">
+        Google Maps
+
+    </button>
+    <button id="panorama"> Street View Panorama </button>
+    <button id="markers">Markers </button>
+    <button id="guess">Guess Location </button>
+    <div id="output">
+    </div>
+    <div id="panorama-div"> </div>
+    <script src="scripts.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB487PSB0yPuTFh69P7_kLMjnarXy8c4JQ&callback=initMap" async defer></script>
+
 </body>
 
 </html>
