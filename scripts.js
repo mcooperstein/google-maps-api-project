@@ -5,6 +5,7 @@ var map;
 var clicks = 0;
 
 function initMap() {
+    $("#panorama-div").hide();
     var myLatLng = {
         lat: -25.363,
         lng: 131.044
