@@ -123,7 +123,7 @@ function randomLocation() {
     var sv = new google.maps.StreetViewService();
     console.log(sv);
     panorama = new google.maps.StreetViewPanorama(document.getElementById('output'), {
-        addressControl: false
+        addressControl: true
     });
     sv.getPanorama({
         location: random,
@@ -150,10 +150,11 @@ function processSVData(data, status) {
     console.log(data);
     console.log(status);
     if (status === 'OK') {
+        $("#output").show();
         var marker = new google.maps.Marker({
             position: data.location.latLng,
-            map: map
-                //title: data.location.description
+            map: map,
+            title: data.location.description
         });
 
         panorama.setPano(data.location.pano);
@@ -175,6 +176,7 @@ function processSVData(data, status) {
         });
     } else {
         console.error('Street View data not found for this location.');
+        $("#output").hide();
         randomLocation();
     }
 }
